@@ -19,10 +19,9 @@
     --letter-spacing: 0;
 
     /* spacing */
-    --profile-width: clamp(20.4375rem, 17.5986rem + 12.1127vw, 28.5rem);
+    --profile-width: clamp(20.4375rem, 19.1831rem + 5.3521vw, 24rem);
     --profile-padding: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
-    --margin-xl: 2.5rem;
-    --margin-lg: 1.5rem;
+    --margin-lg: 1.5rem; 
     --margin-regular: 1rem;
     --margin-xs: 0.25rem;
 }
@@ -35,3 +34,120 @@
     font-display: swap;
     font-weight: 100 900;
 }
+
+/* Global Styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-primary-background);
+    color: var(--color-text-primary);
+    padding: 16px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+
+/* Profile Styles */
+
+main {
+   display: flex;
+   flex-grow: 1;
+   justify-content: center;
+   align-items: center;
+}
+
+.profile-card {
+    background-color: var(--color-profile-background);
+    width: var(--profile-width);
+    padding: var(--profile-padding);
+    border-radius: 12px;
+}
+
+
+.profile-avatar {
+    margin-inline: auto;
+    border-radius: 50%;
+}
+
+.profile-name {
+    margin-top: var(--margin-lg);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+}
+
+.profile-location {
+    margin-top: var(--margin-xs);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent);
+}
+
+.profile-description {
+    margin-top: var(--margin-lg);
+    font-weight: var(--font-weight-regular);
+}
+
+.profile-links {
+    margin-top: var(--margin-lg);
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--margin-regular);
+}
+
+
+.profile-link a {
+    background-color: var(--color-secondary-background);
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    padding: 12px;
+    color: var(--color-text-primary);
+}
+
+.profile-link a:hover,
+.profile-link a:focus {
+    background-color: var(--color-accent);
+    color: var(--color-text-secondary);
+}
+
+
+/* Attribution Styles */
+ 
+ .attribution a {
+     color: var(--color-text-primary);
+ }
