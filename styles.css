@@ -19,7 +19,7 @@
     --letter-spacing: 0;
 
     /* spacing */
-    --profile-width: clamp(20rem, 18.6087rem + 6.9565vw, 24rem);
+    --profile-width: 24rem;
     --profile-padding: clamp(1.5rem, 1.1479rem + 1.5023vw, 2.5rem);
     --margin-lg: 1.5rem; 
     --margin-regular: 1rem;
@@ -91,7 +91,7 @@ main {
 
 .profile-card {
     background-color: var(--color-profile-background);
-    width: var(--profile-width);
+    max-width: var(--profile-width);
     padding: var(--profile-padding);
     border-radius: 12px;
 }
